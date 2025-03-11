@@ -28,7 +28,7 @@ environment {
                         def changedFiles = sh(returnStdout: true, script: 'git diff --name-only HEAD~1 HEAD').trim().split('\n')
 
                     // 'src/' 폴더 변경 여부 확인
-                        def targetFolder = '/*'
+                        def targetFolder = 'src/*'
                         def isModified = changedFiles.any { it.startsWith(targetFolder) }
         
                         if (isModified) {
