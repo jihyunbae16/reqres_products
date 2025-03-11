@@ -25,3 +25,4 @@ spring:
 #    web:
 #      skipPattern: (^cleanup.*|.+favicon.*)
 
+# test!!
