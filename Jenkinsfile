@@ -147,6 +147,7 @@ environment {
                             rm -rf repo1
                         """
                     }
+                    currentBuild.result = 'SUCCESS'
                 }
             }
         } 
