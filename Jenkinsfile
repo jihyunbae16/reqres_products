@@ -14,7 +14,7 @@ environment {
     GITHUB_CREDENTIALS_ID = 'Github-Cred'
     GITHUB_REPO = 'github.com/jihyunbae16/reqres_products.git'
     GITHUB_BRANCH = 'master' // 업로드할 브랜치
-    SERVICES = 'service1' // 추가
+    SERVICES = 'user09-sp' // 추가
 }
 
     stages {
