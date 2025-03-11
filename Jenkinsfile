@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REGISTRY = 'user09.azurecr.io'
+        REGISTRY = 'user0902.azurecr.io'
         IMAGE_NAME = 'product'
         AKS_CLUSTER = 'user09-aks'
         RESOURCE_GROUP = 'user09-rsrcgrp'
@@ -47,7 +47,7 @@ pipeline {
         stage('Push to ACR') {
             steps {
                 script {
-                    sh "az acr login --name ${REGISTRY.split('\\.')[0]}02"
+                    sh "az acr login --name ${REGISTRY.split('\\.')[0]}"
                     sh "docker push ${REGISTRY}/${IMAGE_NAME}:v${env.BUILD_NUMBER}"
                 }
             }
