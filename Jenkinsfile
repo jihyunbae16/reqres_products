@@ -137,14 +137,14 @@ environment {
                         sh """
                             git config --global user.email "thdvh5@g.skku.edu"
                             git config --global user.name "jihyunbae16"
-                            git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${GITHUB_REPO} repo
-                            cp kubernetes/deploy.yaml repo/kubernetes/deploy.yaml
-                            cd repo
+                            git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${GITHUB_REPO} repo1
+                            cp kubernetes/deploy.yaml repo1/kubernetes/deploy.yaml
+                            cd repo1
                             git add kubernetes/deploy.yaml
                             git commit -m "Update deploy.yaml with build ${env.BUILD_NUMBER}"
                             git push origin ${GITHUB_BRANCH}
                             cd ..
-                            rm -rf repo
+                            rm -rf repo1
                         """
                     }
                 }
