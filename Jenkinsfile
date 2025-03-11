@@ -47,7 +47,7 @@ pipeline {
         stage('Push to ACR') {
             steps {
                 script {
-                    sh "az acr login --name ${REGISTRY.split('\\.')[0]}"
+                    sh "az acr login --name ${REGISTRY.split('\\.')[0]}02"
                     sh "docker push ${REGISTRY}/${IMAGE_NAME}:v${env.BUILD_NUMBER}"
                 }
             }
