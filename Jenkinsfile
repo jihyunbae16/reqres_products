@@ -10,7 +10,7 @@ environment {
     AZURE_CREDENTIALS_ID = 'Azure-Cred'
     TENANT_ID = '29d166ad-94ec-45cb-9f65-561c038e1c7a' // Service Principal 등록 후 생성된 ID
     GIT_USER_NAME = 'jihyunbae16'
-    GIT_USER_EMAIL = ‘thdvh5@g.skku.edu’
+    GIT_USER_EMAIL = 'thdvh5@g.skku.edu'
     GITHUB_CREDENTIALS_ID = 'Github-Cred'
     GITHUB_REPO = 'github.com/jihyunbae16/reqres_products.git'
     GITHUB_BRANCH = 'master' // 업로드할 브랜치
@@ -135,8 +135,8 @@ environment {
                 script {
                     withCredentials([usernamePassword(credentialsId: GITHUB_CREDENTIALS_ID, usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
                         sh """
-                            git config --global user.email “thdvh5@g.skku.edu”
-                            git config --global user.name “jihyunbae16”
+                            git config --global user.email "thdvh5@g.skku.edu"
+                            git config --global user.name "jihyunbae16"
                             git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${GITHUB_REPO} repo
                             cp kubernetes/deploy.yaml repo/kubernetes/deploy.yaml
                             cd repo
